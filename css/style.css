@@ -28,6 +28,13 @@ body {
   max-width: 50rem;
   width: 100%;
 
+  border: 1px solid red;
+
+  /* how to  fix BUG Arrow when card Hover */
+  height: 50vh;
+  display: flex;
+  align-items: center;
+
   position: relative;
 }
 
@@ -63,19 +70,20 @@ body {
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: calc((100% / 3) - 5px);
-  gap: .5rem;
+  gap: .45rem;
+  align-items: center;
 
   overflow: hidden;
 }
 
-.carousel :where(.card, .img) {
+/* .carousel :where(.card, .img) {
   display: flex;
   align-items: center;
   justify-content: center;
-}
+} */
 
 .carousel .card {
-  height: 20rem;
+  height: 45vh;
   background-color: var(--primaryColor);
   border-radius: .5rem;
 
@@ -86,13 +94,22 @@ body {
   padding-bottom: 2rem;
 
   cursor: pointer;
+  transition: .5s;
+
+  overflow: hidden;
+}
+
+.card:hover {
+  height: 30rem;
 }
 
 .card .img {
-  background-color: var(--ThernaryColor);
-  width: 10.41rem;
-  height: 10.41rem;
-  border-radius: 50%;
+  /* width: 10.41rem;
+  height: 10.41rem; */
+  width: 15rem;
+  height: 15rem;
+  margin-top: 14rem;
+  transition: .5s;
 
   /* display: flex;
   justify-content: center;
@@ -100,23 +117,44 @@ body {
   border: 3px solid var(--ThernaryColor); */
 }
 
+.card:hover .img {
+  margin-top: 2rem;
+  scale: .75;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, .15);
+  background-color: var(--ThernaryColor);
+}
+
 .card .img img {
-  width: 10rem;
-  height: 10rem;
+  width: 100%;
+  height: 100%;
+  /* width: 10rem;
+  height: 10rem; */
   object-fit: cover;
   object-position: center;
-  border-radius: 50%;
+  border-radius: 5%;
   border: 4px solid var(--primaryColor);
 }
 
 .card h2 {
+  margin: 1rem 0 1.5rem;
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--clr);
+}
+
+.card p {
+  text-align: center;
+  font-weight: 200;
+  line-height: 1;
+  font-size: 1rem;
   margin-top: 1rem;
-  font-weight: 300;
+  padding: 0 2rem;
 }
 
 .card span {
   font-weight: 800;
   line-height: 2;
+  font-size: 1rem;
 }
 
 
@@ -127,16 +165,24 @@ body {
   }
 
   .wrapper .carousel {
-    grid-auto-columns: calc(100% / 2);
+    grid-auto-columns: calc((100% / 2) - 4px);
+  }
+
+  .card .img {
+    margin-top: 12rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 482px) {
   html {
     font-size: 65.5%;
   }
 
   .wrapper .carousel {
     grid-auto-columns: 100%;
+  }
+
+  .card .img {
+    margin-top: 3rem;
   }
 }
