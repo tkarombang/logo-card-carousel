@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Logo-Card</title>
 
+  <!-- feather Icons -->
+  <script src="https://unpkg.com/feather-icons"></script>
+  <!-- My CSS -->
   <link rel="stylesheet" href="/css/style.css">
 </head>
 
@@ -15,24 +18,36 @@
     <ul class="carousel">
       <li class="card" style="--clr:#009643;">
         <div class="img"><img src="./img/1.jpg" alt="logo1"></div>
-        <h2>Modern Logo</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ex velit voluptates totam repudiandae quaerat
-          in dolorem voluptatibus hic sint?</p>
-        <span>3D Perception</span>
+        <h2>Travel</h2>
+        <div class="likes">
+          <img src="./img/me.jpg" alt="profile">
+          <h3>Waziming</h3>
+          <i data-feather="thumbs-up" class="thumb-like" width="17" height="17"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, assumenda!</p>
+        <a href="#" class="btn-buy">Buy</a>
       </li>
       <li class="card" style="--clr:#1f86b5;">
         <div class="img"><img src="./img/2.jpg" alt="logo2"></div>
-        <h2>Agate</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ex velit voluptates totam repudiandae quaerat
-          in dolorem voluptatibus hic sint?</p>
-        <span>Valuation Consulting</span>
+        <h2>Consulting</h2>
+        <div class="likes">
+          <img src="./img/me.jpg" alt="profile">
+          <h3>Waziming</h3>
+          <i data-feather="thumbs-up" class="thumb-like" width="17" height="17"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, assumenda!</p>
+        <a href="#" class="btn-buy">Buy</a>
       </li>
       <li class="card" style="--clr:#0d5272;">
         <div class="img"><img src="./img/3.jpg" alt="logo3"></div>
-        <h2>Blue Fussion</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, ex velit voluptates totam repudiandae quaerat
-          in dolorem voluptatibus hic sint?</p>
-        <span>Cloud Computing Logo</span>
+        <h2>Cloud Computing</h2>
+        <div class="likes">
+          <img src="./img/me.jpg" alt="profile">
+          <h3>Waziming</h3>
+          <i data-feather="thumbs-up" class="thumb-like" width="17" height="17"></i>
+        </div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, assumenda!</p>
+        <a href="#" class="btn-buy">Buy</a>
       </li>
       <li class="card" style="--clr:#52a5cc;">
         <div class="img"><img src="./img/4.jpg" alt="logo4"></div>
@@ -93,6 +108,12 @@
     </ul>
     <button class="right">▶</button>
   </div>
+
+  <script>
+    feather.replace();
+  </script>
+
+  <script src="./js/script.js"></script>
 </body>
 
 </html>
